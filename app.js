@@ -32,7 +32,7 @@ function gameFlash(btn,audio){
 
     setTimeout(function(){
         audio.play();
-    },50)
+    },10)
 
     setTimeout(function(){
         btn.classList.remove("gameflash")
@@ -45,7 +45,7 @@ function userFlash(btn,audio){
 
     setTimeout(function(){
         audio.play();
-    },10)
+    },1)
 
     setTimeout(function(){
         btn.classList.remove("userflash")
