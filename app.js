@@ -11,7 +11,7 @@ audio1.src = "start-13691.mp3";
 const audio2 = new Audio();
 audio2.src = "stop-13692.mp3";
 const audio3 = new Audio();
-audio3.src = "short-beep-tone-47916.mp3";
+audio3.src = "90s-game-ui-1-185094.mp3";
 const audio4 = new Audio();
 audio4.src = "achive-sound-132273.mp3";
 
