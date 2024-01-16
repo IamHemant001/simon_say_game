@@ -1,10 +1,9 @@
 *{
     margin: 8px;
-    text-align: center;
 }
 
 body{
-    background-color: rgba(249, 78, 197, 0.4);
+    background-color: black;
 }
 
 .box-container{
@@ -17,25 +16,60 @@ body{
     width: 15rem;
     border: 15px solid black;
     border-radius: 20%;
-    /* margin: 25px; */
     margin: 20px 10px;
 }
 
+#intru{
+    display: flex;
+    border: 5px solid black;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 0, 157, 0.85),rgba(255, 255, 2, 0.698));
+}
+
+li{
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
 #start-btn{
+    display: block;
+    margin: auto;
     height: 3rem;
     width: 10rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border: 5px solid white;
     border-radius: 10px;
     background-color: black;
     color: white;
     text-shadow: -2px -2px 1px red;
-
+    text-transform: uppercase;
 }
 
-h1,#highScore,h2{
-    text-shadow: -2px -2px 2px red;
+h1{
+    text-shadow: -3px -2px 2px red;
+    text-align: center;
+    color: white;
 }
+
+hr{
+    background: black;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    height: 4px;
+}
+
+#scores{
+    margin: 12px auto 0 0;
+}
+
+#highScore,h2{
+    color: white;
+    text-shadow: -3px -2px 2px red;
+    text-align: center;
+    font-size: 2rem;
+}
+
 
 .green{
     background-color: rgb(4,109,68);
