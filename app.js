@@ -1,17 +1,17 @@
 let gameSeq = [];
 let userSeq = [];
 let Hscore = 0;
-let h2 = document.querySelector("h2")
-let btns = ["green","red","yellow","voilet"]
+let h2 = document.querySelector("h2");
+let startBtn = document.getElementById("start-btn");
+let btns = ["green","red","yellow","voilet"];
 
 let started = false;
 let level = 0;
 
-document.addEventListener("keypress",function(event){
-    if(event.key == "Enter" && started == false){
+startBtn.addEventListener("click",function(event){
+    if(started == false){
         console.log("game stated");
         started = true;
-
         levelUp();
     }
 })
@@ -24,9 +24,10 @@ function gameFlash(btn){
     },250);
 }
 
+
 function userFlash(btn){
     btn.classList.add("userflash");
-
+    
     setTimeout(function(){
         btn.classList.remove("userflash")
     },300);
@@ -35,7 +36,7 @@ function userFlash(btn){
 function levelUp(){
     level ++
     userSeq = []
-
+    startBtn.style.display = "none";
     h2.innerText = `Level ${level}`
     
     let randIdx = Math.floor(Math.random() *3);
@@ -55,11 +56,12 @@ function checkAns(idx){
             setTimeout(levelUp,1000);
         }
     }else{
-        h2.innerHTML = `Game over! <br>Your <b>score<b> was <b> ${level}<b> <br>Press 'enter' to start the game again`;
+        h2.innerHTML = `Your <b>score<b> was <b> ${level}<b><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Game Over!</strong>`;
         highScore(level);
         reset();
     }
 }
+
 function btnPress(){
     let btn = this;
     userFlash(btn);
@@ -76,6 +78,7 @@ for(btn of allBtns){
     btn.addEventListener("click",btnPress);
 }
 
+
 function highScore(level){
     let highScore = document.querySelector("#highScore");
     if(Hscore<level){
@@ -85,21 +88,18 @@ function highScore(level){
 }
 
 function reset(){
+    startBtn.style.display = "inline";
     document.querySelector("body").style.backgroundColor = "rgb(239, 19, 19)";
     userSeq = [];
     gameSeq = [];
     level = 0;
     started = false;
-    document.addEventListener("keypress",function(event){
+    startBtn.addEventListener("click",function(event){
         document.querySelector("body").style.backgroundColor = "rgba(249, 78, 197, 0.4)";
-        if(event.key == "Enter" && started == false){
         console.log("game stated");
+        if(started == false){
         started = true;
-
         levelUp();
     }
     })
 }
-
-
-
