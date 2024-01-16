@@ -9,9 +9,27 @@
 </head>
 <body>
     <h1>Simon Says Game</h1>
-    <h2></h2>
-    <h2 id="highScore">High Score is 0</h2>
+    <div id="intru">
+        <ul>
+            <li>Press the START button. Simon will give the first signal. Repeat the signal by pressing the same color lens.</li>
+
+            <li>Simon will duplicate the first signal and add one. Repeat these two signals by pressing the same color lenses, in order.</li>
+
+            <li>Simon will duplicate these first two signals and add one.</li>
+
+            <li>Continue playing as long as you can repeat each sequence of sig-nals correctly. After the 5th, 9th and 13th signals in a sequence, Simon automatically speeds up.</li>
+
+            <li>If you fail to repeat a sequence exactly, background color changes to "RED" Color. This means you've lost, and the sequence of signals ends.</li>
+        </ul>
+    </div>
+    <hr>
+
+    <h1 id="game-over"></h1>
     <button id="start-btn">Start</button>
+    <div id="scores">
+        <h2></h2>
+        <h2 id="highScore">High Score is 0</h2>
+    </div>
     <div class="box-container">
         <div class="first-line">
             <div class="box green" type="button" id="green"></div>
@@ -24,6 +42,10 @@
         </div>
     </div>
      
+    <audio autoplay loop>
+        <!-- <source src="backdround_music.mp3"> -->
+    </audio>
+
     <script src="app.js"></script>
     
 </body>
