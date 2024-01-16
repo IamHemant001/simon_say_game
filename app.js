@@ -88,6 +88,7 @@ function highScore(level){
 }
 
 function reset(){
+    startBtn.innerText = "Play Again";
     startBtn.style.display = "inline";
     document.querySelector("body").style.backgroundColor = "rgb(239, 19, 19)";
     userSeq = [];
